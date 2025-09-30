@@ -1,17 +1,34 @@
 # 🌿 Apple Leaf Disease Detector
 
+[![Python](https://img.shields.io/badge/Python-3.9%2B-blue.svg)](https://www.python.org/downloads/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-1.25%2B-red.svg)](https://streamlit.io)
+[![TensorFlow](https://img.shields.io/badge/TensorFlow-2.10%2B-orange.svg)](https://www.tensorflow.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 An AI-powered web application that identifies diseases in apple leaves using a Convolutional Neural Network (CNN). This tool helps farmers and gardeners get an instant, accurate diagnosis to facilitate early treatment.
 
 ---
 
 ## ✨ Demo
 
-![web app](https://github.com/user-attachments/assets/70f67d80-b221-4b47-bdb6-05c726844077)
-![diagnosis result](https://github.com/user-attachments/assets/ec545c6b-dabc-40f6-a78d-e09cbc359b22)
-![ai advice](https://github.com/user-attachments/assets/924b5a1e-1711-42c8-8390-37e800b311da)
+![web app](https://github.com/user-attachments/assets/a7e673a6-2d40-4dbc-bf66-2ee39149ca68)
+![diagnosis result](https://github.com/user-attachments/assets/6e46235a-7a79-4353-9b9e-9815f60d7a9b)
+![ai advice](https://github.com/user-attachments/assets/27b449f5-9ff7-4205-8f0d-53ce16e5fc8e)
 
 
 
+## 📖 Table of Contents
+
+- [About The Project](#-about-the-project)
+- [🚀 Features](#-features)
+- [🛠️ Tech Stack](#️-tech-stack)
+- [🧠 Model Architecture](#-model-architecture)
+- [💾 Dataset](#-dataset)
+- [🏁 Getting Started](#-getting-started)
+- [🔧 Usage](#-usage)
+- [📂 Project Structure](#-project-structure)
+- [📄 License](#-license)
+- [📬 Contact](#-contact)
 
 ## 📌 About The Project
 
@@ -33,9 +50,35 @@ This project aims to provide a simple, accessible, and efficient solution for de
 -   **Image Processing:** Pillow, OpenCV
 -   **Numerical Operations:** NumPy
 
-## 🧠 Model Architecture
+.
 
-The core of this application is a **Convolutional Neural Network (CNN)**. The model was trained on a diverse dataset of apple leaf images to learn distinctive features for each disease class. The architecture is based on a pre-trained model like **EfficientNetB0**, fine-tuned for this specific classification task to achieve high accuracy.
+🧠 Model Architecture
+The core of this application is a custom Convolutional Neural Network (CNN), designed and trained from scratch specifically for this project. The model was trained on a dedicated dataset of apple leaf images to accurately distinguish between healthy leaves and those affected by common diseases.
+
+Its architecture is built to learn the specific visual
+http://googleusercontent.com/image_generation_content/1
+
+
+## 💾 Dataset
+
+The model was trained on a public dataset containing thousands of images of healthy and diseased apple leaves. This dataset provides a robust foundation for training computer vision models for agricultural applications.
+
+-   **Source:** *Leave this space to add the source, e.g., Kaggle, PlantVillage, etc.*
+-   **Link:** **`https://www.kaggle.com/datasets/vipoooool/new-plant-diseases-dataset`**
+-   ## 🧠 Model & Training Options
+
+You can get the model for this project in two ways:
+
+1.  **Train from Scratch:** Download the full dataset using the link in the Dataset section.
+    - **Important:** For training, you must use **only** the images located within the `apple` sub-folder of the dataset.
+
+2.  **Use the Pre-trained Model:** For convenience, you can download the ready-to-use trained model directly.
+    - **Model Download Link:** 'https://drive.google.com/file/d/1HSHrhT7MD-D1jHXdQui_TmtXByNY6gZk/view?usp=sharing`
+This comprehensive dataset typically includes the following classes:
+* Healthy
+* Apple Scab
+* Black Rot
+* Cedar Apple Rust
 
 ## 🏁 Getting Started
 
@@ -48,7 +91,6 @@ Make sure you have Python 3.9+ and pip installed on your system.
 -   [pip](https://pip.pypa.io/en/stable/installation/)
 
 ### Installation
-
 
 
 1.  **Create and activate a virtual environment (recommended):**
@@ -67,14 +109,18 @@ Make sure you have Python 3.9+ and pip installed on your system.
     pip install -r requirements.txt
     ```
 
-3.  **Download the trained model file** (e.g., `apple_disease_model.h5`) and place it in a `models/` directory within the project folder. *(Note: You may need to provide a link for others to download your model if it's too large for GitHub).*
+3.  **Set up your secrets:**
+    - Create a file at `.streamlit/secrets.toml`.
+    - Add any necessary API keys or secret credentials to this file. See the [Streamlit Docs](https://docs.streamlit.io/library/advanced-features/secrets-management) for more info.
+
+4.  **Download the trained model file** (e.g., `apple_disease_model.h5`) and place it in the `models/` directory.
 
 ## 🔧 Usage
 
 To run the Streamlit application locally, execute the following command in your terminal from the project's root directory:
 
 ```sh
-streamlit run app.py
+streamlit run app2.py
 ```
 
 Open your web browser and navigate to `http://localhost:8501`.
@@ -83,6 +129,12 @@ Open your web browser and navigate to `http://localhost:8501`.
 
 ```
 apple-leaf-disease-detector/
+│
+├── 📁 .streamlit/
+│   └── 🔑 secrets.toml        # Secret keys (e.g., API keys)
+│
+├── 📁 data/
+│   └── .gitkeep             # Placeholder for data files/scripts
 │
 ├── 📄 app.py                # Main Streamlit application script
 ├── 📁 models/
@@ -97,7 +149,6 @@ apple-leaf-disease-detector/
 ```
 
 
-## 📬 Contact: khotaditya375@gmail.com
+## 📬 Contact
 
-Adityanand Khot - https://www.linkedin.com/in/adityanandkhot-x2?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app 
-Project Link: [https://github.com/your-username/apple-leaf-disease-detector](https://github.com/your-username/apple-leaf-disease-detector)
+Your Name - https://www.linkedin.com/in/adityanandkhot-x2?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app
