@@ -56,7 +56,8 @@ This project aims to provide a simple, accessible, and efficient solution for de
 The core of this application is a custom Convolutional Neural Network (CNN), designed and trained from scratch specifically for this project. The model was trained on a dedicated dataset of apple leaf images to accurately distinguish between healthy leaves and those affected by common diseases.
 
 Its architecture is built to learn the specific visual
-http://googleusercontent.com/image_generation_content/1
+<img width="1024" height="1024" alt="Gemini_Generated_Image_4hbe394hbe394hbe" src="https://github.com/user-attachments/assets/65c4a827-f977-4ad3-b3fd-b64f3f9827cf" />
+
 
 
 ## 💾 Dataset
